@@ -4,11 +4,6 @@
 }
 
 .foo {
-  position: center;
-  display: block;
-}
-
-.foo {
   float: left;
   display: block;
 }

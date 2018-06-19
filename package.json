@@ -1,18 +1,11 @@
 {
-  "name": "cssgrace",
-  "version": "3.0.0",
-  "description": "CSS postproccessor",
+  "name": "cssgrace-lite",
+  "version": "1.0.0",
+  "description": "CSS proccessor",
   "main": "lib/index.js",
-  "author": {
-    "name": "yisi",
-    "email": "yiorsi@gmail.com",
-    "url": "http://iyunlu.com/view"
-  },
+  "author": "fisker Cheung <lionkay@gmail.com>",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:cssdream/cssgrace.git"
-  },
+  "repository": "fisker/cssgrace-lite",
   "keywords": [
     "css",
     "css3",
@@ -23,11 +16,10 @@
     "postproccessor"
   ],
   "dependencies": {
-    "postcss": "^5.0.11",
-    "image-size": "^0.3.5"
+    "postcss": "^6.0.22"
   },
   "devDependencies": {
-    "tape": "^3.0.0"
+    "tape": "^4.9.1"
   },
   "scripts": {
     "test": "tape test"
