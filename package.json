@@ -1,6 +1,6 @@
 {
   "name": "cssgrace-lite",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "CSS proccessor",
   "main": "lib/index.js",
   "author": "fisker Cheung <lionkay@gmail.com>",
