@@ -5,14 +5,20 @@ var test = require('tape')
 var postcss = require('postcss')
 var plugin = require('..')
 
-function filename(name) { return 'test/' + name + '.css' }
-function read(name) { return fs.readFileSync(name, 'utf8') }
+function filename(name) {
+  return 'test/' + name + '.css'
+}
+function read(name) {
+  return fs.readFileSync(name, 'utf8')
+}
 
 function compareFixtures(t, name, msg, opts, postcssOpts) {
   postcssOpts = postcssOpts || {}
   postcssOpts.from = filename('fixtures/' + name)
   opts = opts || {}
-  var actual = postcss().use(plugin).process(read(postcssOpts.from), postcssOpts).css
+  var actual = postcss()
+    .use(plugin)
+    .process(read(postcssOpts.from), postcssOpts).css
 
   var expected = read(filename('fixtures/' + name + '-out'))
   fs.writeFileSync(filename('fixtures/' + name + '-real'), actual)
@@ -29,6 +35,11 @@ test('remove colons', function(t) {
   t.end()
 })
 
+test('resize mixin', function(t) {
+  compareFixtures(t, 'resize', 'Should be transform')
+  t.end()
+})
+
 test('IE opacity hack', function(t) {
   compareFixtures(t, 'ie-opacity', 'Should be added filter')
   t.end()
@@ -40,11 +51,19 @@ test('IE rgba hack', function(t) {
 })
 
 test('inline-block hack', function(t) {
-  compareFixtures(t, 'inline-block', 'Should be added *display: inline and *zoom: 1')
+  compareFixtures(
+    t,
+    'inline-block',
+    'Should be added *display: inline and *zoom: 1'
+  )
   t.end()
 })
 
 test('comment', function(t) {
-  compareFixtures(t, 'comment', 'Should be keep the comments on the current line')
+  compareFixtures(
+    t,
+    'comment',
+    'Should be keep the comments on the current line'
+  )
   t.end()
 })
