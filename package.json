@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "husky": "^0.14.3",
-    "np": "^3.1.0",
+    "np": "^6.0.0",
     "prettier": "^1.13.5",
     "pretty-quick": "^1.11.1",
     "tape": "^4.9.1"
