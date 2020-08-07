@@ -23,7 +23,7 @@
     "np": "^6.1.0",
     "prettier": "^1.13.5",
     "pretty-quick": "^1.11.1",
-    "tape": "^4.9.1"
+    "tape": "^4.13.2"
   },
   "scripts": {
     "precommit": "pretty-quick --staged",
